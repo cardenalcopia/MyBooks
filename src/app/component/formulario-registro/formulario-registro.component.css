@@ -1,0 +1,23 @@
+.main{
+padding-left: 50px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-image: url(https://thumbs.gfycat.com/FemaleDifferentAfricancivet-size_restricted.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.formu{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+  
+    width: 30%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.185);
+    color:white;
+
+}
