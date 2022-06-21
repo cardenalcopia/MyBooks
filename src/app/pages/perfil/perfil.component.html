@@ -11,24 +11,24 @@
         <div class="izquierda">
             <div class="perfilfoto">
                 <div class="foto">
-                        <img src="" alt="">
+                        
                 </div>
                 <div class="datos">
                         <div class="nombre">
-
+                                <h2>{{miUsuario.nombre}} {{miUsuario.apellidos}}</h2>
                         </div>
                         <div class="formulariodatos">
                             <div class="datos">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre">
+                                <input type="text" id="nombre" class="inputi" value="{{miUsuario.nombre}}">
                             </div>
                             <div class="datos">
                                 <label for="apellido">Apellido</label>
-                                <input type="text" id="apellido">
+                                <input type="text" id="apellido"class="inputi" value="{{miUsuario.apellidos}}">
                             </div>
                             <div class="datos">
                                 <label for="correo">Correo</label>
-                                <input type="text" id="correo">
+                                <input type="text" id="correo"class="inputi" value="{{miUsuario.correo}}">
                             </div>
                             
                         </div>
@@ -37,6 +37,17 @@
         </div>
         <div class="derecha">
             <div class="formulariofoto">
+                <div class="titulo">
+                    <h2>Modificar datos</h2>
+                </div>
+                <div class="formulario">
+                    <input type="text" id="name" class="datosformulario" placeholder="Nombre" [(ngModel)]="miUsuario.nombre" #input1>
+                    <input type="text" id="surname" class="datosformulario" placeholder="Apellido"[(ngModel)]="miUsuario.apellidos"#input2>
+                    <input type="text" id="mail" class="datosformulario" placeholder="E-mail"[(ngModel)]="miUsuario.correo"#input3>
+                    <input type="text" id="url" class="datosformulario" placeholder="Url Fotografia"[(ngModel)]="miUsuario.url"#input4>
+                    <button type="button" id="modificar" class="boton" on-click=enviar(input1,input2,input3,input4)>Modificar</button>
+                </div>
+
 
             </div>
 
