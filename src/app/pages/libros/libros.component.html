@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="izquierda">
+            <div class="cards" >
+            
+                <ul class="lista" >
+                    <div *ngIf="miLibro.length===0"> No hay libros </div>
+                    <li *ngFor="let libro of miLibro; let par = even">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="{{libro.photo}}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">{{libro.tituo}}</h5>
+                             
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">{{libro.tipoLibro}}</li>
+                              <li class="list-group-item">{{libro.autor}}</li>
+                              <li class="list-group-item"> {{libro.precio}}</li>
+                              <li class="list-group-item"> {{libro.id_libro|referencia}}</li>
+                            </ul>
+                            <div class="card-body">
+                             <button type="button"[ngClass]="par===true?'clasepar':''">Comprar</button>
+                            </div>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="derecha">
+            <div class="formulario">
+                <input type="text" id="titulo" class="datosformulario" placeholder="Titulo" #input1>
+                <input type="text" id="tipoLibro" class="datosformulario" placeholder="Tipo" #input2>
+                <input type="text" id="autor" class="datosformulario" placeholder="Autor"#input3>
+                <input type="number" id="precio" class="datosformulario" placeholder="precio"#input4>
+                <input type="text" id="photo" class="datosformulario" placeholder="Url Fotografia"#input5>
+                <button type="button" id="modificar" class="boton" on-click=enviar(input1,input2,input3,input4,input5)>Añadir</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
